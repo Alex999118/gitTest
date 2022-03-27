@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <!-- <script src="/js/script.js"></script> -->
+</head>
+<body>
+
+  <div class="container">
+    <div class="container_player">
+      <div class="player__bg-play">...</div>
+
+      <div class="container__video">
+        <video src="./video/video.mp4" class="player__video"></video>
+        <div class="speaker__counter">50%</div>
+      </div>
+
+      
+      <div class="controls__shadow"></div>
+      <div class="controls">
+
+        <div class="controls__progress">
+          <div class="progress__track">
+            <div class="track__preview">
+              <video src="/video/video.mp4" class="preview__video"></video>
+              <span class="preview__current-time">00:00</span>
+            </div>
+          </div>  <!-- progress__track -->
+
+          <div class="progress__stripes">
+
+            <div class="progress__stripe  progress__stripe--main-active">
+              <div class="progress__toddler"></div>
+              <svg class="progress__stripe_svg  progress__stripe_svg--main-active">
+                <line x1= "0" y1="0" x2="0%" y2= "0"/>
+              </svg>
+            </div>
+            <div class="progress__stripe  progress__stripe--hover">
+              <svg class="progress__stripe_svg  progress__stripe_svg--hover">
+                <line x1= "0" y1="0" x2="0%" y2= "0"/>
+              </svg>
+            </div>
+            <div class="progress__stripe  progress__stripe--loaded">
+              <svg class="progress__stripe_svg  progress__stripe_svg--loaded">
+                <line x1= "0" y1="0" x2="0%" y2= "0"/>
+              </svg>
+            </div>
+            <div class="progress__stripe  progress__stripe--main">
+              <svg class="progress__stripe_svg   progress__stripe_svg--main">
+                <line x1= "0" y1="0" x2="100%" y2= "0"/>
+              </svg>
+            </div>
+
+          </div>  <!-- progress__stripes -->
+        </div>  <!-- controls__progress -->
+
+        <div class="controls__bottom">
+
+          <div class="controls__bottom_left">
+            <div class="controls__play">
+              <button class="play__pause  reset__button">
+                <svg viewBox="0 0 33 40" class="pause__icon global__icon">
+                  <path d="M33 20L2.07336e-06 39.9186L3.8147e-06 0.0814118L33 20Z"/>
+                </svg>
+              </button>
+              <button class="play__move  reset__button">
+                <svg viewBox="0 0 13 16" class="move__icon global__icon">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0V16H4V0ZM13 0H9V16H13V0Z"/>
+                </svg>
+              </button>
+            </div>  <!-- controls__play -->
+  
+            <button class="controls__next-video reset__button">
+              <svg viewBox="0 0 30 30" class="next-video__icon global__icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0H25V30H30V0ZM0 29.7224L21 15L0 0.277565V29.7224Z"/>
+              </svg>              
+            </button>
+  
+            <button class="controls__speaker reset__button">
+              <svg viewBox="0 0 44 42" class="speaker__icon global__icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M44 21C44 38 28 42 28 42V38C28 38 40 35 40 21C40 7 28 4 28 4V0C28 0 44 4 44 21ZM28 12C28 12 33 14 33 21C33 28 28 30 28 30V12ZM22 2L10 14H0V28H10L22 40V2Z"/>
+              </svg>
+  
+              <div class="speaker__wrap">
+                <span class="speaker__bar">
+                  <span class="speaker__fill"></span>
+                </span>
+                <input type="range" min="0" max="100" value="50" class="speaker__sound">
+              </div>
+            </button>
+  
+            <div class="controls__time">
+              <span class="time__current time--style">00:00</span>
+              <span class="time__full time--style">00:00</span>
+            </div>
+          </div>  <!-- controls__bottom_left -->
+          <div class="controls__bottom_right">
+            <button class="controls__subs reset__button">
+              <svg viewBox="0 0 44 34" class="subs__icon global__icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0C1.34314 0 0 1.34315 0 3V31C0 32.6569 1.34314 34 3 34H41C42.6569 34 44 32.6569 44 31V3C44 1.34315 42.6569 0 41 0H3ZM5 15H12V19H5V15ZM17 15H39V19H17V15ZM27 25H5V29H27V25ZM32 25H39V29H32V25Z"/>
+              </svg>
+            </button>
+            <button class="controls__adjustment reset__button">
+              <svg viewBox="0 0 38 40" class="adjustment__icon global__icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14 3C14 1.34315 15.3431 0 17 0H21C22.6568 0 24 1.34315 24 3V5.85353C25.7556 6.47403 27.3611 7.41208 28.7477 8.59865L31.2224 7.16987C32.6573 6.34144 34.4921 6.83307 35.3205 8.26794L37.3205 11.732C38.1489 13.1669 37.6573 15.0017 36.2224 15.8301L33.7499 17.2576C33.9142 18.1468 34 19.0634 34 20C34 20.9366 33.9142 21.8532 33.7499 22.7423L36.2224 24.1699C37.6573 24.9983 38.1489 26.8331 37.3205 28.2679L35.3205 31.732C34.4921 33.1669 32.6573 33.6586 31.2224 32.8301L28.7477 31.4013C27.3611 32.5879 25.7556 33.526 24 34.1465V37C24 38.6569 22.6568 40 21 40H17C15.3431 40 14 38.6569 14 37V34.1465C12.2444 33.526 10.6389 32.5879 9.25229 31.4013L6.77757 32.8301C5.34269 33.6586 3.50792 33.1669 2.67949 31.732L0.679494 28.2679C-0.148933 26.8331 0.342692 24.9983 1.77757 24.1699L4.25011 22.7423C4.08585 21.8532 4 20.9366 4 20C4 19.0634 4.08585 18.1468 4.25011 17.2576L1.77757 15.8301C0.342692 15.0017 -0.148933 13.1669 0.679494 11.732L2.67949 8.26795C3.50792 6.83307 5.34269 6.34144 6.77757 7.16987L9.2523 8.59865C10.6389 7.41208 12.2444 6.47404 14 5.85353V3ZM19 27C22.866 27 26 23.866 26 20C26 16.134 22.866 13 19 13C15.134 13 12 16.134 12 20C12 23.866 15.134 27 19 27Z"/>
+              </svg>
+            </button>
+            <button class="controls__mini-player reset__button">
+              <svg viewBox="0 0 54 44" class="mini-player__icon global__icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 40V4H50V40H4ZM0 3C0 1.34315 1.34315 0 3 0H51C52.6569 0 54 1.34315 54 3V41C54 42.6569 52.6569 44 51 44H3C1.34315 44 0 42.6569 0 41V3ZM44 20H25V34H44V20Z"/>
+              </svg>
+            </button>
+            <button class="controls__default-size reset__button">
+              <svg viewBox="0 0 40 24" class="default-size__icon global__icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M40 0H0V24H40V0ZM35 4H5V20H35V4Z"/>
+              </svg>              
+            </button>
+            <button class="controls__fullscreen reset__button">
+              <svg viewBox="0 0 40 40" class="fullscreen__icon global__icon">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0H0V15H5V5H15V0ZM15 40H0V25H5V35H15V40ZM40 40H25V35H35V25H40V40ZM25 0H40V15H35V5H25V0Z"/>
+              </svg>            
+            </button>
+          </div>  <!-- controls__bottom_right -->
+          
+        </div>  <!-- controls__bottom -->
+      </div>  <!-- controls -->
+
+    </div>  <!-- container_player -->
+  </div>  <!-- container -->
+
+
+  <!-- <div class="box"></div> -->
+
+
+  <script src="./js/script.js"></script>
+</body>
+</html> 
